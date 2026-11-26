@@ -35,10 +35,10 @@ jobs:
         env:
           ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
 
-      - name: Set version (versionCode = run number)
+      - name: Set version (versionCode = 100 + run number)
         run: |
           VERSION=$(node -p "require('./package.json').version")
-          sed -i "s/versionCode [0-9]*/versionCode ${{ github.run_number }}/" android/app/build.gradle
+          sed -i "s/versionCode [0-9]*/versionCode $((100 + ${{ github.run_number }}))/" android/app/build.gradle
           sed -i "s/versionName \"[^\"]*\"/versionName \"$VERSION\"/" android/app/build.gradle
           grep -E "applicationId|versionCode|versionName" android/app/build.gradle
 
