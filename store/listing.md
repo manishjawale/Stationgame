@@ -47,4 +47,4 @@ Questionnaire → Game → no violence, no user interaction/chat, no gambling, a
 - screenshot-1..5.png (1080×1920 phone)
 - tablet7-1..3.png (1200×1920, 7-inch tablet)
 - tablet10-1..3.png (1600×2560, 10-inch tablet)
-- fold-inner-square-1/2.png (1800×1800, foldable inner 1:1), fold-inner-4x3.png (1536×2048, inner 4:3), fold-outer-10x16.png (1080×1728, outer screen)
+- fold-inner-square-1/2.png (1800×1800, foldable inner 1:1), fold-inner-4x3.png (2048×1536, inner 4:3), fold-extra-3x4.png (1536×2048, extra), fold-outer-10x16.png (1080×1728, outer screen)
