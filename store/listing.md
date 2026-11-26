@@ -45,3 +45,5 @@ Questionnaire → Game → no violence, no user interaction/chat, no gambling, a
 - icon-512.png (app icon)
 - feature-graphic.png (1024×500)
 - screenshot-1..5.png (1080×1920 phone)
+- tablet7-1..3.png (1200×1920, 7-inch tablet)
+- tablet10-1..3.png (1600×2560, 10-inch tablet)
