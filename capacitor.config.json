@@ -1,0 +1,6 @@
+{
+  "appId": "com.manishjawale.nextstation",
+  "appName": "Next Station",
+  "webDir": "www",
+  "android": { "backgroundColor": "#ece5d6" }
+}

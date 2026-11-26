@@ -1,0 +1,25 @@
+{
+  "name": "next-station",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Next Station — a Mumbai local train tap puzzle game",
+  "scripts": {
+    "libs": "node scripts/copy-libs.js",
+    "serve": "npm run libs && npx http-server www -p 8080 -c-1",
+    "android:add": "npm run libs && npx cap add android && node scripts/patch-android.js",
+    "assets": "npx @capacitor/assets generate --android --iconBackgroundColor '#f6c21c' --splashBackgroundColor '#f6c21c'",
+    "sync": "npm run libs && npx cap sync android && node scripts/patch-android.js",
+    "open": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor-community/admob": "^7.0.0",
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@fontsource/baloo-2": "^5.0.0",
+    "three": "0.128.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.0",
+    "@capacitor/cli": "^7.0.0"
+  }
+}
