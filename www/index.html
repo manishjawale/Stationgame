@@ -57,7 +57,7 @@ button.go{background:var(--yellow);color:#111;border-color:#111;width:100%;margi
 #toast{position:absolute;left:50%;top:40%;translate:-50% 0;background:#111e;color:#fff;padding:6px 16px;border-radius:999px;font-weight:700;font-size:17px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:5;white-space:nowrap}
 #toast.on{opacity:1}
 #stuck{display:none;background:var(--orange);color:#fff;text-align:center;font-weight:700;border-radius:10px;padding:6px;margin-top:10px}
-#over{position:absolute;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:6;padding:14px}
+#over{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:6;padding:14px}
 #over .box{background:var(--card);border-radius:16px;padding:16px 18px;text-align:center;max-width:330px;width:100%;border:3px solid var(--yellow)}
 #over h2{margin:0;font-size:30px;line-height:1.1}
 .stars{display:flex;justify-content:center;gap:6px;margin:8px 0 4px}
@@ -301,7 +301,7 @@ const TR=[{col:'var(--g)',hex:'#1f9d55',short:'SLOW',name:'Borivali Slow'},{col:
 const SKINS=['#f1c27d','#c68642','#e0ac69','#8d5524','#ffdbac'];
 const HAIR=['#2a1d14','#111','#4a2f1b','#6b6b6b'];
 const $=s=>document.querySelector(s);
-const board=$('#board'),wrap=$('#wrap');
+const board=$('#board'),wrap=$('#wrap');document.body.appendChild($('#over'));
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,SPEED=reduce?25:80;
 const ls={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let level=ls.get('ns2-level',0),coins=ls.get('ns2-coins',30),best=ls.get('ns2-best',{}),muted=ls.get('ns2-mute',false);
